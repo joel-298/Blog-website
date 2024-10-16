@@ -1,0 +1,38 @@
+npx create-next-app@latest 
+
+What is your project named? my-app
+Would you like to use TypeScript? No / Yes
+Would you like to use ESLint? No / Yes
+Would you like to use Tailwind CSS? No / Yes
+Would you like your code inside a `src/` directory? No / Yes
+Would you like to use App Router? (recommended) No / Yes
+Would you like to use Turbopack for `next dev`?  No / Yes
+Would you like to customize the import alias (`@/*` by default)? No / Yes
+What import alias would you like configured? @/*
+
+
+npm install next@latest react@latest react-dom@latest
+
+Open your package.json file and add the following scripts:
+{
+  "scripts": {
+    "dev": "next dev",                           //dev: runs next dev to start Next.js in development mode.
+    "build": "next build",                       //build: runs next build to build the application for production usage.
+    "start": "next start",                       //start: runs next start to start a Next.js production server.
+    "lint": "next lint"                          //lint: runs next lint to set up Next.js' built-in ESLint configuration.
+  } 
+}
+
+// for react : npm install next@latest react@latest react-dom@latest
+
+// for css : npm install webpack@latest css-loader@latest postcss-loader@latest
+
+// for smooth scroll : npm install react-scroll
+
+// for mongdb : npm install mongodb
+
+// for mongoose : npm install mongoose@8.0.0                           
+
+// for authentication :  npm i npm install next-auth@5.0.0-beta.3
+
+//  openssl rand -base 64 32

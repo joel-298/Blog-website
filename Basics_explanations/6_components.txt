@@ -1,0 +1,44 @@
+
+PART 1 : use client,  YOUTUBE LINK : https://www.youtube.com/watch?v=Qdkg_mrniLk
+
+
+
+IN NEXT JS by default every thing is in server component 
+To convert it to client component we have to use the keyword "use client" 
+If we write use client on the top of the page then it will convert every component of that page to client component 
+So the best way to use "use client" is to use it only on the client components 
+
+Difference : for example if we have a onclick function on a button and then in that function we are doing console.log(hello world) , then it will not run ! 
+Because    : its a server component .....
+Solution   : We will have to convert it to client component so that it can interact with the user 
+
+// KEEP THE LARGE COMPONENTS ON THE SERVER : for example if we are importing a large liberary then keep it on Server we do not want it to be moved on client component
+
+
+
+// WHEN TO USE "use client" :-  
+    "server"                                                               "use client"
+Rendering static content	                                     Interactivity like buttons, forms, or event handling
+Fetching data during server-side rendering (SSR)	             Using useState, useEffect, or other React hooks
+SEO-focused content (e.g., headers, static text)	             Accessing window, document, or browser APIs
+Static images, links, or headings	                             Third-party libraries that require browser APIs (e.g., LOCAL-STORAGE, SESSION-STORAGE)
+Content without dynamic updates	                                 Form submission logic or input fields
+Server-only functionality (e.g., accessing database directly)	 State management for client-side interactions
+Fetching data with getServerSideProps or getStaticProps          Animations or transitions dependent on client interactions
+Non-interactive lists, tables, or components	                 Client-side API fetching with useEffect
+Static navigation menus	                                         Conditional rendering based on client state (e.g., modals)
+                                                               
+
+
+
+PART 2 : HYDRATION : explained  ,               YOUTUBE LINK : https://www.youtube.com/watch?v=vyKbV0Menrg                   
+    when html of client side is different from html send by server side :  
+    ALSO LOOK AT THE EXAMPLE OF MATH.LIBERARY given by the project video 
+    
+    3 ways of solving this error : 
+        (i)   useEffect 
+        (ii)  Dynamic import 
+        (iii) supressHydrationWarning ----> im going with this approach 
+
+// in case of (iii) WHEN THE COMPONENT IS "use client"
+//              wrap the "element which is showing the hydration problem" inside of this div box like this : <div suppressHydrationWarning>{ele}</div>
